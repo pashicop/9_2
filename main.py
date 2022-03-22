@@ -5,7 +5,8 @@ import os
 
 import requests
 
-HEADERS = {"Authorization": "OAuth AQAAAAAWTeeYAADLW0-rjvA3UE1bqNEUIgDXDu4"}
+KEY = "OAuth AQAAAAAWTeeYAADLW0-rjvA3UE1bqNEUIgDXDu4"
+HEADERS = {"Authorization": KEY}
 
 
 class YaUploader:
@@ -30,7 +31,7 @@ class YaUploader:
 
 
 if __name__ == '__main__':
-    uploader = YaUploader('AQAAAAAWTeeYAADLW0-rjvA3UE1bqNEUIgDXDu4')
+    uploader = YaUploader(KEY)
     dir_path = Path.home()
     f_path = Path(dir_path, "Downloads", "1.docx")
     print(f_path)
